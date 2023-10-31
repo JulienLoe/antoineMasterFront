@@ -1,0 +1,9 @@
+
+<ul>
+    <li *ngFor="let contact of tabContact; let i = index">
+        <div >
+        {{contact.nom + "" +  contact.prenom + "" + contact.age}}
+        <app-contact-delete (delete)="delete(i)"></app-contact-delete>
+    </div>
+    </li>
+</ul>

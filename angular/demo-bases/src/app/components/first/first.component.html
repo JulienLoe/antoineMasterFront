@@ -1,0 +1,28 @@
+<p>La valeur de la variable est {{monTexte}}</p>
+<img src="{{url}}" alt="">
+<button (click)="sayHello()">Click me</button>
+
+<input type="text" (input)="logText($event)">
+
+
+      <!-- <form  [formGroup]="form">
+        <label for="emailInput">Inscrivez-vous !</label>
+        <input type="text" name="nom">
+    <input type="text" name="prenom">
+    <input type="text" name="age">
+        <button type="submit">OK!</button>
+    </form> -->
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <label>
+          Email:
+          <input type="email" formControlName="email">
+        </label>
+        <br>
+        <label>
+          Mot de passe:
+          <input type="password" formControlName="password">
+        </label>
+        <br>
+        <button type="submit">Se connecter</button>
+      </form>

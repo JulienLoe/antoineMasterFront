@@ -1,0 +1,36 @@
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis necessitatibus aliquid alias deleniti corporis fugiat dignissimos fuga. Eum quidem aut voluptate qui illum ratione temporibus iure. Ab placeat dolore fugit.</p>
+
+<p>
+    age : {{age}}
+</p>
+
+<button (click)="incrementAge()">Increment</button>
+
+<div *ngIf="age >= 18"; else blbla>
+    la condition est vérifiée !
+</div>
+
+<div *ngIf="age < 18">
+     la condition est erronée
+
+</div>
+
+<ng-template #blabla>
+    <div>
+        la condition est erronée
+    </div>
+</ng-template>
+
+<ul>
+    <li *ngFor="let prenom of mesPrenoms">
+        {{prenom}}
+    </li>
+</ul>
+
+<hr>
+
+<!-- <p>
+    firtsname: <b>{{firstname}}</b>
+</p>
+
+<input type="text" [value]="firstname" (input)="firtNameInputHandler($event)"> -->

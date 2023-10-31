@@ -1,0 +1,22 @@
+<form>
+    <label>Marque :</label>
+    <input type="text" [(ngModel)]="marque" name="marque">
+    <br>
+    <label>Model :</label>
+    <input type="text" [(ngModel)]="model" name="model">
+    <br>
+    <label>Origine :</label>
+    <input type="text" [(ngModel)]="origine" name="origine">
+    <br>
+    <button type="submit" (click)="onSubmit()">Soumettre</button>
+  </form>
+
+  <ul>
+    <li [ngStyle]="getStyle(car.id)" *ngFor="let car of tabCar">
+        <div >
+        {{car.model + "" +  car.marque + "" + car.origine}}
+        <button (click)="onView(tabCar.indexOf(car))"></button>
+    </div>
+    </li>
+
+</ul>
